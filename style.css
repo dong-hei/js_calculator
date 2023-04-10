@@ -1,0 +1,66 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(134, 134, 134);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    /* 가운데 정렬 */
+}
+
+.cal{
+    width: 287px;
+    border:1px solid rgb(227, 227, 227);
+    background-color: #ccc;
+    padding:5px;
+}
+
+.cal form{
+    display: grid;
+    grid-template-columns: repeat(4, 65px);
+    grid-auto-rows: 65px;
+    grid-gap: 5px;
+    /* 그리드를 이용해서 영역 지정을한다 */
+}
+
+.cal form input{
+    border:2px solid rgb(134, 134, 134);
+    cursor: pointer;
+}
+
+.cal form input:hover{
+    background-color: #898989;
+    box-shadow: 1px 1px 2px #333;
+    font-size: 19px;
+    /* 호버 이벤트 */
+}
+
+.cal form .clear{
+    background-color: #656565;
+}
+
+.cal form .operator{
+    background-color: #f5e5c3;
+}
+.cal form .dot{
+    background-color: rgb(203, 203, 203);
+}
+
+.cal form input[type='text']{
+    grid-column: span 4;
+    text-align: right;
+    padding: 0 10px;
+}
+
+.cal form .clear{
+    grid-column: span 3;
+}
+
+.cal form .result{
+    grid-column: span 2;
+}
